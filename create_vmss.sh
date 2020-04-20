@@ -241,12 +241,12 @@ printf "Create ${AZ_VM} Azure Virtual Machine Scale Set...\\n"
 az vmss create \
     --name "${AZ_VM}" \
     --resource-group "${AZ_VM_RG}" \
-    --image "MicrosoftWindowsDesktop:Windows-10:rs4-pron:latest" \
-    --vm-sku "Standard_NV6" \
-    --storage-sku "StandardSSD_LRS" \
+    --image "MicrosoftWindowsDesktop:Windows-10:19h2-pro:latest" \
+    --vm-sku "Standard_NV6_Promo" \
+    --storage-sku "StandardHDD_LRS" \
     --instance-count "1" \
     --eviction-policy "delete" \
-    --priority "Low" \
+    --priority "Standard" \
     --upgrade-policy-mode "Automatic" \
     --subnet "/subscriptions/${AZ_SUBSCRIPTION_ID}/resourceGroups/${AZ_VNET_RG}/providers/Microsoft.Network/virtualNetworks/${AZ_VNET}/subnets/${AZ_VNET_SUBNET_NAME}" \
     --nsg "${AZ_VM}-nsg" \
