@@ -245,9 +245,6 @@ az vmss create \
     --vm-sku "Standard_NV6_Promo" \
     --storage-sku "StandardHDD_LRS" \
     --instance-count "1" \
-    --eviction-policy "delete" \
-    --priority "Standard" \
-    --upgrade-policy-mode "Automatic" \
     --subnet "/subscriptions/${AZ_SUBSCRIPTION_ID}/resourceGroups/${AZ_VNET_RG}/providers/Microsoft.Network/virtualNetworks/${AZ_VNET}/subnets/${AZ_VNET_SUBNET_NAME}" \
     --nsg "${AZ_VM}-nsg" \
     --public-ip-address "" \
